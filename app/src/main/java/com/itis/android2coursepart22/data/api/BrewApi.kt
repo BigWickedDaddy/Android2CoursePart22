@@ -15,4 +15,5 @@ interface BrewApi {
 
     @GET("random")
     fun getRandomBeer():Single<BrewResponse>
+    
 }

@@ -1,4 +1,7 @@
 package com.itis.android2coursepart22.data.api.mapper
 
-class BrewMapper {
+import com.itis.android2coursepart22.data.api.response.BrewResponseItem
+
+interface BrewMapper {
+    fun mapBrewResponseItem(response : BrewResponseItem):BrewResponseItem
 }

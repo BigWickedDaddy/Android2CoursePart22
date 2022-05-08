@@ -2,7 +2,7 @@ package com.itis.android2coursepart22.di.module
 
 import android.app.Application
 import android.content.Context
-import com.itis.android2coursepart22.data.api.mapper.BrewMapperImpl
+import com.itis.android2coursepart22.data.api.mapper.BrewMapper
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,7 +17,7 @@ class AppModule {
     fun provideContext(app: Application): Context = app.applicationContext
 
     @Provides
-    fun provideBrewMapper(): BrewMapperImpl = BrewMapperImpl()
+    fun provideBrewMapper(): BrewMapper = BrewMapper()
 
     @Provides
     fun provideDefaultDispatcher(): CoroutineDispatcher = Dispatchers.Default

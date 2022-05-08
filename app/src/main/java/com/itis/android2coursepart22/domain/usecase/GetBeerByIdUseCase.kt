@@ -6,11 +6,11 @@ import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.schedulers.Schedulers
 import javax.inject.Inject
 
-class GetBeerByAbvUseCase @Inject constructor(
+class GetBeerByIdUseCase @Inject constructor(
     private val brewRepository: BrewRepository
 ) {
     operator fun invoke(
-        abv : Double
-    ): Single<BeerDetailModel> = brewRepository.getBeerByAbv(abv)
+        id : Int
+    ): Single<BeerDetailModel> = brewRepository.getBeerById(id)
         .subscribeOn(Schedulers.io())
 }

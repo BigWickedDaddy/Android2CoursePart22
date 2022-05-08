@@ -1,6 +1,6 @@
 package com.itis.android2coursepart22.domain.entity
 
-data class BeerDetailModel {
+data class BeerDetailModel (
     val abv: Double,
     val brewersTips: String,
     val contributedBy: String,
@@ -12,4 +12,4 @@ data class BeerDetailModel {
     val id: Int,
     val name: String,
     val imageUrl: String,
-}
+)

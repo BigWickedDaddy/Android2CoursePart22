@@ -13,7 +13,12 @@ interface BrewApi {
     @GET("beers?abv_gt={abv}")
     fun getBeerByAbv(@Query("abv") abv:Double):Single<BrewResponseItem>
 
+    @GET("beers?beer_name={name}")
+    fun getBeerByName(@Query("name") name: String):Single<BrewResponseItem>
+
+    @GET("beers?ids={id}")
+    fun getBeerById(@Query("id") id: Int):Single<BrewResponseItem>
+
     @GET("random")
     fun getRandomBeer():Single<BrewResponseItem>
-
 }

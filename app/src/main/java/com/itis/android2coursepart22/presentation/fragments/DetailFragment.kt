@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
+import coil.load
 import com.google.android.material.snackbar.Snackbar
 import com.itis.android2coursepart22.R
 import com.itis.android2coursepart22.databinding.FragmentDetailBinding
@@ -55,25 +56,18 @@ class DetailFragment : MvpAppCompatFragment(R.layout.fragment_detail), BrewDetai
         presenter.updateView(beerId)
     }
 
-
-//    private fun initIngredientList(beerDetailModel: BeerDetailModel) {
-//        brewadapter = BrewAdapter(beerDetailModel)
-//        this.binding?.rvIngridients?.apply {
-//            adapter = brewadapter
-//        }
-//    }
-
     override fun updateView(beer: BeerDetailModel) {
-        with(binding) {}
-
-    }
-
-    override fun showLoading() {
-        binding?.progressDetail?.isVisible = true
-    }
-
-    override fun hideLoading() {
-        binding?.progressDetail?.isVisible = false
+        with(binding) {
+            this!!.tvName.text = beer.name
+            tvFirstbrewed.text = beer.firstBrewed
+            tvDescription.text = beer.description
+            tvContributedby.text = beer.contributedBy
+            tvAbv.text= beer.abv.toString()
+            tvBrewertips.text = beer.brewersTips
+            tvId.text = beer.id.toString()
+            tvFoodpairing.text= beer.foodPairing.toString()
+            ivBeerim.load(converter.setImageUrl(beer.imageUrl))
+        }
     }
 
     override fun showError(throwable: Throwable) {

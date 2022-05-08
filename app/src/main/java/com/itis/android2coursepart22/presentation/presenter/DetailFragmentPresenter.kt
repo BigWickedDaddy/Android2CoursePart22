@@ -36,12 +36,6 @@ class DetailFragmentPresenter @Inject constructor(
     fun updateView(id:Int) {
         disposables += getBeerByIdUseCase(id)
             .observeOn(AndroidSchedulers.mainThread())
-            .doOnSubscribe {
-                viewState.showLoading()
-            }
-            .doAfterTerminate {
-                viewState.hideLoading()
-            }
             .subscribeBy(
                 onSuccess = {
                     viewState.updateView(it)

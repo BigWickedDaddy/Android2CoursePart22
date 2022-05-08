@@ -20,10 +20,6 @@ class MainFragmentPresenter @Inject constructor(
 
     private val disposables = CompositeDisposable()
 
-//    override fun onFirstViewAttach() {
-//        super.onFirstViewAttach()
-//    }
-
     override fun attachView(view: BrewListView?) {
         super.attachView(view)
     }

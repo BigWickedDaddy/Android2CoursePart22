@@ -48,7 +48,8 @@ class MainFragment : MvpAppCompatFragment(R.layout.fragment_main), BrewListView 
     }
 
     private fun initSearchView() {
-        binding?.searchView?.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+        binding?.svSearch?.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 query?.let {
                     presenter.showNameList(it)
@@ -65,17 +66,17 @@ class MainFragment : MvpAppCompatFragment(R.layout.fragment_main), BrewListView 
         brewAdapter = BrewAdapter(converter) { id ->
             openDetailsScreen(id)
         }
-        binding?.rvList?.apply {
+        binding?.rvArtworks?.apply {
             adapter = brewAdapter
         }
     }
 
     override fun showLoading() {
-        binding?.progressMain?.isVisible = true
+        binding!!.progress.visibility = View.VISIBLE
     }
 
     override fun hideLoading() {
-        binding?.progressMain?.isVisible = false
+        binding!!.progress.visibility = View.GONE
     }
 
     override fun updateList(list: MutableList<BeerDetailModel>) {

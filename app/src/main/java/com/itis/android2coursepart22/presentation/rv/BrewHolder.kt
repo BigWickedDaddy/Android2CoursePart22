@@ -3,6 +3,7 @@ package com.itis.android2coursepart22.presentation.rv
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.itis.android2coursepart22.databinding.ItemMainBinding
 import com.itis.android2coursepart22.domain.ImgConverter
 import com.itis.android2coursepart22.domain.entity.BeerDetailModel
@@ -14,8 +15,8 @@ class BrewHolder (
 
     fun bind(item: BeerDetailModel) {
     with(binding) {
-        tvItemRecipeTitle.text = item.name
-//        ivRecipePhoto.load(ImgConverter.setImageUrl(item.image))
+        tvDescription.text = item.name
+        ivImage.load(imageConverter.setImageUrl(item.imageUrl))
         itemView.setOnClickListener {
             onClick(item.id)
         }

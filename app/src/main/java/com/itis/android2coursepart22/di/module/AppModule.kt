@@ -2,7 +2,6 @@ package com.itis.android2coursepart22.di.module
 
 import android.app.Application
 import android.content.Context
-import com.itis.android2coursepart22.data.api.mapper.BrewMapper
 import com.itis.android2coursepart22.data.api.mapper.BrewMapperImpl
 import dagger.Module
 import dagger.Provides

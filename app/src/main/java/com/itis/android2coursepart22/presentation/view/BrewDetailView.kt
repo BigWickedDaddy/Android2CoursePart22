@@ -8,8 +8,7 @@ import moxy.viewstate.strategy.alias.Skip
 @AddToEndSingle
 interface BrewDetailView : MvpView {
     fun updateView(beerDetailModel: BeerDetailModel)
-    fun showLoading()
-    fun hideLoading()
+
     @Skip
     fun showError(throwable: Throwable)
 }

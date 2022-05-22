@@ -17,6 +17,7 @@ import com.itis.android2coursepart22.presentation.view.BrewListView
 import dagger.hilt.android.AndroidEntryPoint
 import moxy.MvpAppCompatFragment
 import moxy.presenter.InjectPresenter
+import moxy.presenter.ProvidePresenter
 import retrofit2.HttpException
 import javax.inject.Inject
 
@@ -31,8 +32,8 @@ class MainFragment : MvpAppCompatFragment(R.layout.fragment_main), BrewListView 
     @InjectPresenter
     lateinit var presenter: MainFragmentPresenter
 
-//    @ProvidePresenter
-//    fun providePresenter(): MainFragmentPresenter = presenter
+    @ProvidePresenter
+    fun providePresenter(): MainFragmentPresenter = presenter
 
     @Inject
     lateinit var converter: ImgConverter

@@ -44,10 +44,7 @@ class DetailFragment : MvpAppCompatFragment(R.layout.fragment_detail), BrewDetai
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentDetailBinding.inflate(inflater, container, false)
-        return binding?.root
-    }
+    ): View? = inflater.inflate(R.layout.fragment_detail,container,false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

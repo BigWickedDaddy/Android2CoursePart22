@@ -16,5 +16,8 @@
         android:id="@+id/detailFragment"
         android:name="com.itis.android2coursepart22.presentation.fragments.DetailFragment"
         android:label="DetailFragment" >
+        <action
+            android:id="@+id/action_detailFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
 </navigation>

@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Android2CoursePart2,2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="abv">abv</string>
+    <string name="ibu">ibu</string>
+    <string name="brewertips">Brewer Tips</string>
+    <string name="firstbrewed">First Brewed</string>
+    <string name="contributedby">Contributed By</string>
+    <string name="foodpairing">Food Pairing</string>
+    <string name="id">Id</string>
+    <string name="empty">Empty</string>
 </resources>

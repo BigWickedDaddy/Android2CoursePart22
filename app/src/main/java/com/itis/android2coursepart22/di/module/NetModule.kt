@@ -6,6 +6,8 @@ import com.itis.android2coursepart22.di.qualifier.ApiKeyInterceptor
 import com.itis.android2coursepart22.di.qualifier.LoggingInterceptor
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -16,6 +18,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 private const val BASE_URL = "https://api.punkapi.com/v2/"
 
 @Module
+@InstallIn(SingletonComponent::class)
 class NetModule {
 
 //    @Provides
